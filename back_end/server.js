@@ -1,8 +1,11 @@
 //We will be importing express and the products.js file
-const express = require('express');
-const products = require('./data/products');
+import express from 'express';
+import  products from './data/products.js';
+import  dotenv  from 'dotenv'
+import cors  from 'cors';
 
-const cors = require('cors')
+dotenv.config()
+
 
 const app = express();
 
@@ -27,6 +30,9 @@ app.get('/api/products/:id', (req,res)=>{
 })
 
 
+const mode = process.env.NODE_ENV
+const port = process.env.PORT
+
 
 //This will listen to port 5000
-app.listen(5000, console.log('PORT IS RUNNING'));
+app.listen(port || 5000, console.log(`Application is running on ${mode} mode using port ${port}`));

@@ -2,15 +2,24 @@
   "name": "gulit",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "start": "node back_end/server.js"
+    "start": "node back_end/server.js",
+    "server": "nodemon back_end/server.js",
+    "client": "npm run dev --prefix front_end",
+    "concurrently": "concurrently \"npm run server\" \"npm run client\""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1",
+    "nodemon": "^2.0.22"
   }
 }

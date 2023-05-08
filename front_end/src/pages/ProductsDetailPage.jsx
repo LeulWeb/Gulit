@@ -32,13 +32,12 @@ const ProductsDetailPage = ({match}) => {
       </span>
       
      </Link>
-     <div className="grid grid-cols-1 md:grid-cols-3 mt-4 gap-3">
+     <div className="grid grid-cols-1 md:grid-cols-3 mt-10 gap-3">
 
         {/* Image column */}
-        <div className='md:col-span-2 md:row-span-2'>
+        <div className='md:col-span-1 '>
           <img src={theProduct.image} alt="" />
-        </div>3
-
+        </div>
         {/* Title , review and Price */}
 
         <div className='my-2'>
